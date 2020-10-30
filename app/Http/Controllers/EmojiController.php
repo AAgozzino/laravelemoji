@@ -124,6 +124,8 @@ class EmojiController extends Controller
      */
     public function destroy(Emoji $emoji)
     {
-        //
+        $emoji->delete();
+
+        return redirect()->route("emoji.index");
     }
 }
